@@ -19,3 +19,26 @@ items.forEach((item) => {
     inner.classList.toggle("flip");
   });
 });
+
+const productos = [
+  {
+    img: "",
+    title: "",
+    precio: 12,
+  },
+  {
+    img: "",
+    title: "",
+    precio: 12,
+  },
+  {
+    img: "",
+    title: "",
+    precio: 12,
+  },
+  {
+    img: "",
+    title: "",
+    precio: 12,
+  },
+];
