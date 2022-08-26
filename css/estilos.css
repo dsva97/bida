@@ -91,7 +91,7 @@ body {
 }
 
 /* This container is needed to position the front and back side */
-.active .flip-card-inner {
+.flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -100,34 +100,39 @@ body {
   transform-style: preserve-3d;
 }
 
+.flip-card-inner > * {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .active .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.active .flip {
-  transform: rotateY(180deg);
-}
-
 /* Position the front and back side */
-.active .flip-card-front,
-.active .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Style the front side (fallback if image is missing) */
-.active .flip-card-front {
-  background-color: #bbb;
+.flip-card-front {
   color: black;
 }
 
 /* Style the back side */
-.active .flip-card-back {
-  background-color: dodgerblue;
+.flip-card-back {
   color: white;
   transform: rotateY(180deg);
 }
